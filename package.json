@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "lodash": "^4.17.14",
     "postcss-custom-media": "^7.0.8"
   }
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,700&display=swap" rel="stylesheet">
+    <title>Unicornio Web Profesional</title>
+</head>
+<body>
+    <section class="container">
+        <section class="main-grid">
+            <div id="logo-button" class="responsive-logo">
+                <img src="./icons/unicorn.png" alt="">
+            </div>
+            <section class="lateral">
+                    <div class="lateral-c">
+                        <div class="contact">
+                            <a class="contact-link instagram"></a>
+                            <a class="contact-link twitter"></a>
+                            <a class="contact-link youtube"></a>
+                            <a class="contact-link whatsapp"></a>
+                        </div>
+                    </div>
+            </section>
+            <div class="header-grid-section">
+                <h1 class="title-page">Unicornio Web Profesional</h1>
+                    <ol class="item-bar-1">
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                    </ol>
+                    <ol class="item-bar-2">
+                        <li>
+                            <a href="#about-me">Sobre mí</a>
+                        </li>
+                    </ol>
+                    <ol class="item-bar-3">
+                        <li>
+                            <a href="#projects">Portafolio</a>
+                        </li>
+                    </ol>
+                    <div class="header-img">
+                        <img src="./icons/image.png" alt="">
+                    </div>
+                </div>
+                <section class="lateral-header">
+                    <img src="./icons/unicorn.png" alt="">
+                    <div class="lateral-contact">
+                        <div class="contact">
+                            <a class="contact-link instagram" href=""></a>
+                            <a class="contact-link twitter" href=""></a>
+                            <a class="contact-link youtube" href=""></a>
+                            <a class="contact-link whatsapp" href=""></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="content">
+                    <div class="box-container">
+                        <div class="box-content1">
+                            <img class="box-img" src="./icons/development.png" alt="">
+                            <div class="box-description">
+                                <h3 class="box-title">Desarrollo Web</h3>
+                                <p class="box-skills">HTML + CSS + Responsive Design</p>
+                            </div>
+                        </div>
+                        <div class="box-content2">
+                          <img class="box-img" src="./icons/design.png" alt="">
+                          <div class="box-description">
+                              <h3 class="box-title">Diseño Web</h3>
+                              <p class="box-skills">UI/UX + Adobe XD/Figma + Zeplin</p>
+                          </div>
+                        </div>
+                        <img class="float-img" src="./icons/rocket.png" alt="">
+                    </div>
+                </section>
+                        <section id="about-me"class="about-me">
+                            <h1 class="about-title">Sobre mí</h1>
+                            <div class="about-text">
+                                <p>Soy un front-end development que está en constante crecimiento, me gusta la satisfacción que se siente resolver cada problema que se presenta, me gustan los idiomas, leer es una apasionada constante en mi vida de aprendizaje y me gusta la música</p>
+                                <h6>- Me encantaria trabajar en una empresa cuya misión sea aportarle algo realmente valioso a la sociedad</h6>
+                            </div>
+                        </section>
+                        <section id="projects" class="projects">
+                            <h1 class="project-title">Proyectos</h1>
+                            <div class="boxes">
+                                <div class="project-box1">
+                                    <img src="./images/kersells.png" alt="">
+                                </div>
+                                <div class="project-box2">
+                                    <img src="images/caskades.png" alt="">
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <h4>built by: <a href="https://twitter.com/imceler">@imceler</a> </h4>
+                        </footer>
+                    </section>
+                </section>
+    <script>
+        const mobile = window.matchMedia('screen and (max-width:560px)')
+        const lateral = document.querySelector('.lateral')
+        const logo = document.querySelector('.responsive-logo')
+        const button = document.querySelector('#logo-button')
+
+        mobile.addListener(validation) 
+
+        function validation(event){
+              if (event.matches) {
+                button.addEventListener('click', hideShow)
+              }
+              else {
+                button.removeEventListener('click', hideShow)
+              }
+            }
+      
+            validation(mobile)
+      
+        function hideShow() {
+          if(lateral.classList.contains('is-active') && logo.classList.contains('is-active') ) {
+            lateral.classList.remove('is-active')
+            logo.classList.remove('is-active')
+          }else {
+            lateral.classList.add('is-active')
+            logo.classList.add('is-active')
+          }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1156,8 +1156,11 @@ ol li a:hover {
     justify-content: center;
     align-items: center;
 }
+.footer h4 {
+    margin: 0;
+}
 @media (--small) {
-    .footer h4{
+    .footer h4 {
         font-size: .8em;
     }
 }
